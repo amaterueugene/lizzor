@@ -5,3 +5,5 @@
 venv/
 .env
 lizzor/lizzor/__pycache__/
+lizzor/homepage/migrations/
+lizzor/homepage/__pycache__/
