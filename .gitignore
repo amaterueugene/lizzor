@@ -4,3 +4,4 @@
 *.scss.map
 venv/
 .env
+lizzor/lizzor/__pycache__/
