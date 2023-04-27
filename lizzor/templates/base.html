@@ -9,6 +9,25 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <img src="{% static 'homepage/imgs/logo-branding.png' %}" alt="logo">
+    <header>
+        <div class="header-menu-container">
+            <div class="logo">
+                <img src="{% static 'homepage/imgs/logo-branding-white.png' %}" alt="Логотип проекта">
+            </div>
+            <div class="header-menu-list">
+                {% for item in categories %}
+                <a href="#" class="menu-list-item">{{ item }}</a>
+                {% endfor %}
+            </div>
+            <div class="header-profile">
+                <a href="#" class="profile-icon-a">
+                    <img src="{% static 'homepage/imgs/icons/icons8-male-user-50-white.png' %}" alt="Профиль">
+                </a>
+            </div>
+        </div>
+        <div class="subheader">
+
+        </div>
+    </header>
 </body>
 </html>
