@@ -18,7 +18,7 @@ class Image(models.Model):
     '''Главное изображение публикации. Также показываемое на карточке публикации'''
     title = models.CharField(max_length=255, verbose_name='Название')
     source = models.CharField(max_length=100, verbose_name='Источник')
-    image = models.ImageField(upload_to='images/%Y/%m/', verbose_name="Изображение")
+    image = models.ImageField(upload_to='articles/images/%Y/%m/', verbose_name="Изображение")
 
     def __str__(self):
         return f"{self.pk}:{self.title}"
