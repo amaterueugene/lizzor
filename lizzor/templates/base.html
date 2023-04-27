@@ -26,8 +26,16 @@
             </div>
         </div>
         <div class="subheader">
-
+            <div class="current-category">
+                <h1>{{ cat_selected }}</h1>
+            </div>
+            <div class="subcategories">
+                {% for subcat in subcategories %}
+                    <a href="#">{{ subcat.name }}</a>
+                {% endfor %}
+            </div>
         </div>
     </header>
+
 </body>
 </html>
