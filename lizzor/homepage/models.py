@@ -4,9 +4,10 @@ from django.db import models
 class Author(models.Model):
     '''Автор публикации(не профиль пользователя)'''
     fullname = models.CharField(max_length=255, verbose_name='Имя автора')
+    slug = models.SlugField(verbose_name='Slug')
 
     def __str__(self):
-        return self.fullname
+        return f"{self.pk}:{self.fullname}"
     
     class Meta:
         verbose_name = 'Автор'
@@ -20,7 +21,7 @@ class Image(models.Model):
     image = models.ImageField(upload_to='images/%Y/%m/', verbose_name="Изображение")
 
     def __str__(self):
-        return self.title
+        return f"{self.pk}:{self.title}"
     
     class Meta:
         verbose_name = 'Изображение'
@@ -59,7 +60,7 @@ class Article(models.Model):
     '''Публикация'''
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     summary = models.CharField(max_length=400, verbose_name='Краткое описание')
-    content = models.CharField(verbose_name='Контент')
+    content = models.CharField(max_length=15000 ,verbose_name='Контент')
     image = models.ForeignKey('Image', on_delete=models.PROTECT)
     author = models.ForeignKey('Author', on_delete=models.PROTECT)
     time_created = models.DateTimeField(auto_now_add=True)
@@ -68,7 +69,7 @@ class Article(models.Model):
     subcategory = models.ForeignKey('Subcategory', on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.title
+        return f"{self.pk}: {self.title}"
     
     class Meta:
         verbose_name = 'Публикация'
