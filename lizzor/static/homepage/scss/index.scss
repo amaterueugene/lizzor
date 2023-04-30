@@ -39,3 +39,31 @@
         }
     }
 }
+
+.order-and-search-box {
+    max-width: 1170px;
+    max-height: 30px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    .ordering {
+        display: flex;
+        gap: 25px;
+        // just for test. gonna remake it
+        .order-by-popular {
+            font-weight: 300;
+        }
+        // -------------------------------
+    }
+    .search-bar {
+        margin-right: 35px;
+        #search-bar-field {
+            border: 1px solid black;
+            border-style: inset;
+            border-radius: 5px;
+            max-height: 20px;
+        }
+    }
+}

@@ -8,3 +8,4 @@ lizzor/lizzor/__pycache__/
 lizzor/homepage/migrations/
 lizzor/homepage/__pycache__/
 lizzor/media/
+lizzor/db.sqlite3

@@ -41,3 +41,37 @@
 .slider-container .slider-block .slider-block-content .block-title {
   margin-bottom: 10px;
 }
+
+.order-and-search-box {
+  max-width: 1170px;
+  max-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid grey;
+}
+.order-and-search-box .ordering {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+.order-and-search-box .ordering .order-by-popular {
+  font-weight: 300;
+}
+.order-and-search-box .search-bar {
+  margin-right: 35px;
+}
+.order-and-search-box .search-bar #search-bar-field {
+  border: 1px solid black;
+  border-style: inset;
+  border-radius: 5px;
+  max-height: 20px;
+}
