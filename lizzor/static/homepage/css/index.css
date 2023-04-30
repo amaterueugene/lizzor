@@ -1,0 +1,43 @@
+.slider-container {
+  max-width: 1170px;
+  max-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  margin: 0 auto;
+}
+.slider-container h1, .slider-container p, .slider-container a {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+}
+.slider-container h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.slider-container p {
+  font-size: 14px;
+  line-height: 21px;
+}
+.slider-container .slider-block {
+  min-width: 585px;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.slider-container .slider-block .slider-block-content {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  max-width: 450px;
+}
+.slider-container .slider-block .slider-block-content .block-title {
+  margin-bottom: 10px;
+}
