@@ -1,3 +1,7 @@
+a {
+  color: black;
+}
+
 .slider-container {
   max-width: 1170px;
   max-height: 300px;
@@ -103,6 +107,7 @@ main > article > .main-container .article-box {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 240px;
+  color: black;
 }
 main > article > .main-container .article-box .text-box {
   margin: 10px 0 10px 20px;
