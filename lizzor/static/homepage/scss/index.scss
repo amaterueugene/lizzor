@@ -31,7 +31,7 @@
         .slider-block-content {
             margin-left: 40px;
             margin-bottom: 30px;
-            max-width: 450px;
+            max-width: 460px;
 
             .block-title {
                 margin-bottom: 10px;
@@ -138,6 +138,17 @@ main>article>.main-container {
                 display: block;
             }
         }
+    }
+}
+
+.pagination {
+    display: flex;
+    column-gap: 40px;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    p, a {
+        color: black;
     }
 }
 

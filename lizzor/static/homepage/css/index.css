@@ -36,7 +36,7 @@
 .slider-container .slider-block .slider-block-content {
   margin-left: 40px;
   margin-bottom: 30px;
-  max-width: 450px;
+  max-width: 460px;
 }
 .slider-container .slider-block .slider-block-content .block-title {
   margin-bottom: 10px;
@@ -163,6 +163,21 @@ main > article > .main-container .article-box .img-box img {
   max-width: 316px;
   border-radius: 10px;
   display: block;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.pagination p, .pagination a {
+  color: black;
 }
 
 footer {
