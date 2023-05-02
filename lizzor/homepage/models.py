@@ -7,7 +7,7 @@ class Author(models.Model):
     slug = models.SlugField(verbose_name='Slug')
 
     def __str__(self):
-        return f"{self.pk}:{self.fullname}"
+        return self.fullname
     
     class Meta:
         verbose_name = 'Автор'

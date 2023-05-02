@@ -75,3 +75,92 @@
   border-radius: 5px;
   max-height: 20px;
 }
+
+main > article > .main-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0px;
+}
+main > article > .main-container .article-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 240px;
+}
+main > article > .main-container .article-box .text-box {
+  margin: 10px 0 10px 20px;
+  max-width: 740px;
+  max-height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main > article > .main-container .article-box .text-box .article-date {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 15px;
+  color: #707070;
+  margin-bottom: 5px;
+}
+main > article > .main-container .article-box .text-box .article-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+main > article > .main-container .article-box .text-box .article-summary {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  width: 670px;
+}
+main > article > .main-container .article-box .text-box .article-sub-info {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main > article > .main-container .article-box .text-box .article-sub-info img {
+  height: 15px;
+  margin-right: 5px;
+}
+main > article > .main-container .article-box .text-box .article-sub-info p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #707070;
+  padding-top: 2px;
+}
+main > article > .main-container .article-box .text-box .article-sub-info .sub-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+}
+main > article > .main-container .article-box .img-box img {
+  max-height: 200px;
+  max-width: 316px;
+  border-radius: 10px;
+  display: block;
+}

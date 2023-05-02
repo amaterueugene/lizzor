@@ -7,7 +7,7 @@ from .utils import DataMixin
 class ShowArticlesView(DataMixin, ListView):
     model = Article
     template_name = 'homepage/index.html'
-    context_object_name = 'article'
+    context_object_name = 'articles'
 
     paginate_by = 10
 

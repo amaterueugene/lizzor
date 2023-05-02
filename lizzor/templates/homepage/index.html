@@ -38,4 +38,36 @@
     </div>
 </section>
 <!-- временный params-box -->
+<main>
+    <article>
+        <div class="main-container">
+            {% for article in articles %}
+            <div class="article-box">
+                <div class="text-box">
+                    <p class="article-date">{{ article.time_created }}</p>
+                    <h1 class="article-title">{{ article.title }}</h1>
+                    <p class="article-summary">{{ article.summary }}</p>
+                    <div class="article-sub-info">
+                        <div class="article-views sub-info-box">
+                            <span class="views-icon article-icon">
+                                <img src="{% static 'homepage/imgs/icons/eye-50.png' %}" alt="Views Icon">
+                            </span>
+                            <p>{{ article.views }}</p>
+                        </div>
+                        <div class="article-author sub-info-box">
+                            <span class="author-icon article-icon">
+                                <img src="{% static 'homepage/imgs/icons/author-50.png' %}" alt="Author Icon">
+                            </span>
+                            <p>{{ article.author }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img class="article-image" src="{{ article.image.image.url }}" alt="{{ article.image.title }}">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</main>
 {% endblock %}
