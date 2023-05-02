@@ -40,5 +40,49 @@
     {% block content %}
 
     {% endblock %}
+<footer style="background:url({% static 'homepage/imgs/header-background.jpg' %});background-position:bottom;">
+    <div class="footer-container">
+        <div class="footer-row">
+            <h1 class="row-title">О Lizzor</h1>
+            <a href="#" class="row-link">О нас</a>
+            <a href="#" class="row-link">Вакансии</a>
+            <a href="#" class="row-link">Блог</a>
+        </div>
+        <div class="footer-row">
+            <h1 class="row-title">Сотрудничество</h1>
+            <a href="#" class="row-link">Тарифы</a>
+            <a href="#" class="row-link">Размещение баннеров</a>
+            <a href="#" class="row-link">Партнёрство</a>
+        </div>
+        <div class="footer-row">
+            <h1 class="row-title">Сообщить об ошибке</h1>
+            <a href="#" class="row-link">Проблемы с доступом</a>
+            <a href="#" class="row-link">Ошибочность информации</a>
+            <a href="#" class="row-link">Нарушение АП</a>
+        </div>
+        <div class="footer-row">
+            <h1 class="row-title">Контакты</h1>
+            <a href="#" class="row-link">contact@lizzor.com</a>
+            <a href="#" class="row-link">+375 (44) 776-83-22</a>
+            <div class="social-links">
+                <div class="instagram">
+                    <a href="#" class="footer-social-link">
+                        <img src="{% static 'homepage/imgs/icons/instagram.png' %}" alt="Instagram Account">
+                    </a>
+                </div>
+                <div class="telegram">
+                    <a href="#" class="footer-social-link">
+                        <img src="{% static 'homepage/imgs/icons/telegram.png' %}" alt="Telegram Channel">
+                    </a>
+                </div>
+                <div class="tiktok">
+                    <a href="#" class="footer-social-link">
+                        <img src="{% static 'homepage/imgs/icons/tiktok.png' %}" alt="TikTok Account">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
