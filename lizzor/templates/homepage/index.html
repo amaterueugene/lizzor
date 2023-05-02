@@ -11,7 +11,7 @@
     <!-- It's going to be a slider at some point of time -->
     <div class="slider-container">
         {% for post in slider_posts %}
-            <div class="slider-block" style="background: url('{{ post.image.image.url}}');background-size: cover;">
+            <div class="slider-block" style="background: url('{{ post.image.image.url}}');background-size: cover; background-position: center;">
                 <div class="slider-block-content">
                     <h1 class="block-title">
                         {{ post.title|truncatewords:6 }}
@@ -29,8 +29,8 @@
 <section>
     <div class="order-and-search-box">
         <div class="ordering">
-            <p class="order-by order-by-new">По новизне</p>
-            <p class="order-by order-by-popular">По популярности</p>
+            <a class="order-by order-by-new" href="">По новизне</a>
+            <a class="order-by order-by-popular"  href="">По популярности</a>
         </div>
         <div class="search-bar">
             <input type="search" name="Поиск" id="search-bar-field">
