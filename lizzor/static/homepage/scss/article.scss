@@ -1,0 +1,66 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+
+    .title-box {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 59px;
+        text-align: center;
+    }
+    .image-box {
+        background-color: black;
+        border: 1px solid black;
+        img {
+            max-height: 500px;
+        }
+        .source-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    .content-box {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .detail-article-add-info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        a { color: black; text-decoration: underline; }
+
+        .add-info-left, .add-info-right{
+            display: flex;
+            column-gap: 50px;
+        }
+        .add-info-path {
+            display: flex;
+        }
+    }
+    .telegram-box {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        a { color: black; text-decoration: underline; }
+        margin-bottom: 20px;
+    }
+}

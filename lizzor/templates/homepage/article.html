@@ -9,7 +9,41 @@
 <main>
     <article>
         <div class="container">
-            
+            <div class="title-box">
+                <h1 class="detail-article-title">{{ article.title }}</h1>
+            </div>
+            <div class="image-box">
+                <img src="{{ article.image.image.url }}" alt="Article Image" class="detail-article-img">
+                <div class="source-box">
+                    <p class="source">Источник: {{ article.image.source }}</p>
+                </div>
+            </div>
+            <div class="content-box">
+                <p class="detail-article-content">{{ article.content }}</p>
+            </div>
+            <div class="detail-article-add-info">
+                <div class="add-info-left">
+                    <div class="add-info-views">
+                        <p class="views-count">Просмотры: {{ article.views }}</p>
+                    </div>
+                    <div class="add-info-author">
+                        <p class="author-p">Автор: {{ article.author }}</p>
+                    </div>
+                </div>
+                <div class="add-info-right">
+                    <div class="add-info-date">
+                        <p class="date-p">{{ article.time_created }}</p>
+                    </div>
+                    <div class="add-info-path">
+                        <a path-p href="{% url 'CategoryPage' category_slug=article.category.slug %}">{{ article.category }}</a> 
+                        <p> / </p>
+                        <a href="{% url 'SubCategoryPage' category_slug=article.category.slug subcategory_slug=article.subcategory.slug %}">{{ article.subcategory }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="telegram-box">
+                <p>Наш канал в <a href="https://t.me/+zKcisdHLOwBhYjY6">Telegram</a>. Присоединяйтесь!<br>Хочешь предложить новость? Пиши нам в телеграм-бот. Это анонимно и быстро</p>
+            </div>
         </div>
     </article>
 </main>

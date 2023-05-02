@@ -1,0 +1,98 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 50px;
+}
+.container .title-box {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 59px;
+  text-align: center;
+}
+.container .image-box {
+  background-color: black;
+  border: 1px solid black;
+}
+.container .image-box img {
+  max-height: 500px;
+}
+.container .image-box .source-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+.container .content-box {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+.container .detail-article-add-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+.container .detail-article-add-info a {
+  color: black;
+  text-decoration: underline;
+}
+.container .detail-article-add-info .add-info-left, .container .detail-article-add-info .add-info-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+}
+.container .detail-article-add-info .add-info-path {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.container .telegram-box {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container .telegram-box a {
+  color: black;
+  text-decoration: underline;
+}
