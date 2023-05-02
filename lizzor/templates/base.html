@@ -13,11 +13,11 @@
     <header>
         <div class="header-menu-container">
             <div class="logo">
-                <img src="{% static 'homepage/imgs/logo-branding-white.png' %}" alt="Логотип проекта">
+                <a href="{% url 'HomePage' %}"><img src="{% static 'homepage/imgs/logo-branding-white.png' %}" alt="Логотип проекта"></a>
             </div>
             <div class="header-menu-list">
                 {% for item in categories %}
-                <a href="#" class="menu-list-item">{{ item }}</a>
+                <a href="{% url 'CategoryPage' category_slug=item.slug %}" class="menu-list-item">{{ item }}</a>
                 {% endfor %}
             </div>
             <div class="header-profile">
