@@ -24,3 +24,13 @@ class DataMixin:
         if 'subcat_selected' in context:
             context['title'] = Subcategory.objects.get(slug=context['subcat_selected'].slug).name + ' - Lizzor'
         return context
+    
+
+class ArticleMixin:
+    def get_user_context(self, **kwargs):
+        context = kwargs
+        # Все категории для вывода в header
+        context['categories'] = Category.objects.all()
+        # title для страницы
+        context['title'] = context['article'].title + ' - Lizzor'
+        return context
