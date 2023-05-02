@@ -20,4 +20,7 @@ class DataMixin:
             context['title'] = 'Главная страница'
         else:
             context['title'] = context['cat_selected'].name + ' - Lizzor'
+        # меняем title если перешли по субкатегории
+        if 'subcat_selected' in context:
+            context['title'] = Subcategory.objects.get(slug=context['subcat_selected'].slug).name + ' - Lizzor'
         return context
