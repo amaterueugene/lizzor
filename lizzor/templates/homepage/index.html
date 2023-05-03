@@ -11,6 +11,7 @@
     <!-- It's going to be a slider at some point of time -->
     <div class="slider-container">
         {% for post in slider_posts %}
+        <a href="{% url 'ArticlePage' article_id=post.pk %}">
             <div class="slider-block" style="background: url('{{ post.image.image.url}}');background-size: cover; background-position: center;">
                 <div class="slider-block-content">
                     <h1 class="block-title">
@@ -21,6 +22,8 @@
                     </p>
                 </div>  
             </div>
+        </a>
+            
         {% endfor %}
     </div>
 </article>
@@ -59,15 +62,17 @@
         </div>
     </article>
     <!-- Пагинация -->
-    <nav class="pagination">
-        {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
-        {% endif %}
-        <p>{{ page_obj.number }}</p>
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
-        {% endif %}
+    {% if page_obj.has_other_pages %}
+        <nav class="pagination">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
+            {% endif %}
+            <p>{{ page_obj.number }}</p>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
+            {% endif %}
         </nav>
+    {% endif %}
     <!-- Пагинация -->
 </main>
 {% endblock %}
