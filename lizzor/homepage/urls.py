@@ -7,6 +7,7 @@ from lizzor import settings
 urlpatterns = [
     path('', ShowArticlesView.as_view(), name='HomePage'),
     path('category/<slug:category_slug>', ShowCatArticlesView.as_view(), name='CategoryPage'),
+    path('category/<slug:category_slug>', ShowCatArticlesView.as_view(), name='CategoryPage'),
     path('category/<slug:category_slug>/<slug:subcategory_slug>', ShowSubCatArticlesView.as_view(), name='SubCategoryPage'),
     path('article/<int:article_id>', ShowArticleView.as_view(), name='ArticlePage')
 ]
