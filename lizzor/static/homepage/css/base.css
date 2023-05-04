@@ -74,7 +74,7 @@ header .header-menu-container .header-profile > a > img {
   margin-left: 260px;
 }
 header .subheader {
-  min-width: 645px;
+  min-width: 745px;
   min-height: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,9 +101,10 @@ header .subheader .subcategories {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-width: 100%;
 }
 header .subheader .subcategories a {

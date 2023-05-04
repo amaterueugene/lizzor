@@ -60,7 +60,7 @@ header {
     }
 
     .subheader {
-        min-width: 645px; 
+        min-width: 745px; 
         min-height: 140px; 
         display: flex;
         flex-direction: column;
@@ -76,7 +76,8 @@ header {
             margin-top: 30px;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
+            flex-wrap: wrap;
             min-width: 100%;
             a {
                 font-weight: 600;
