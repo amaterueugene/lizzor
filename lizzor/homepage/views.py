@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Category, Subcategory, Article
 from .utils import DataMixin, ArticleMixin

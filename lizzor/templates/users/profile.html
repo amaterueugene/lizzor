@@ -1,0 +1,43 @@
+{% extends 'minimal.html' %}
+{% load static %}
+{% block add_links %}
+<link rel="stylesheet" href="{% static 'users/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <article>
+        <div class="profile-container">
+            <div class="resume">
+                <img class="profile-avatar" src="{{ profile.avatar.url }}" alt="Аватар пользователя">
+                <div class="naming">
+                    <h1 class="profile-full-name">{{ profile.first_name }} {{ profile.last_name }}</h1>
+                    <p class="profile-username">@{{ profile.username }}</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="read_later content-block">
+                    <h1 class="content-placeholder"></h1>
+                    <div class="content-list">
+                        {% for item in profile.bookmarks.all %}
+                        <div class="content-post">
+                            <p>{{ item.title }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="bookmarks content-block">
+                    <h1 class="content-placeholder"></h1>
+                    <div class="content-list">
+                        {% for item in profile.read_later.all %}
+                        <div class="content-post">
+                            <p>{{ item.title }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+{% endblock %}

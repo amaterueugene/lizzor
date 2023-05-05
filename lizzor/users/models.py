@@ -19,6 +19,7 @@ class Profile(AbstractUser):
     )
 
     username = models.CharField(max_length=100, unique=True, blank=False, verbose_name='Имя пользователя')
+    slug = models.SlugField(max_length=100, unique=True, blank=False, verbose_name='Slug')
     email = models.EmailField(max_length=100, unique=True, blank=True, verbose_name='Электронная почта')
     first_name = models.CharField(max_length=100, blank=True, verbose_name='Имя')
     last_name = models.CharField(max_length=100, blank=True, verbose_name='Фамилия')
