@@ -60,10 +60,56 @@ header .header-menu-container .header-menu-list {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header .header-menu-container .header-profile > a > img {
-  max-width: 29px;
-  max-height: 29px;
+header .header-menu-container .header-profile {
+  position: relative;
+}
+header .header-menu-container .header-profile .header-dropdown {
+  display: none;
+}
+header .header-menu-container .header-profile .header-dropdown-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  left: 60%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+header .header-menu-container .header-profile .header-dropdown-active a {
+  text-transform: none;
+  font-size: 16px;
+}
+header .header-menu-container .header-profile .header-dropdown-active form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 3px;
+}
+header .header-menu-container .header-profile .header-dropdown-active form input, header .header-menu-container .header-profile .header-dropdown-active form button {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+header .header-menu-container .header-profile .header-dropdown-active form button {
+  padding: 2px 8px;
+}
+header .header-menu-container .header-profile .profile-icon-btn {
   margin-left: 260px;
+}
+header .header-menu-container .header-profile .profile-icon-btn > img {
+  width: 29px;
+  height: 29px;
 }
 
 footer {

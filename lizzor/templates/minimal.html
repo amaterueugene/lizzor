@@ -21,9 +21,31 @@
                 {% endfor %}
             </div>
             <div class="header-profile">
-                <a href="#" class="profile-icon-a">
+                {% if user.is_authenticated %}
+                <button class="profile-icon-btn">
+                    <img src="{{ profile.avatar.url}}" alt="Профиль">
+                </button>
+                <div class="header-dropdown">
+                
+                </div>
+                {% else %}
+                <button class="profile-icon-btn">
                     <img src="{% static 'homepage/imgs/icons/icons8-male-user-50.png' %}" alt="Профиль">
-                </a>
+                </button>
+                <div class="header-dropdown">
+                    <form action="" method="post" class="profile-login-form">
+                        <input type="text">
+                        <input type="text">
+                        <button>Войти</button>
+                    </form>
+                    <div class="profile-register">
+                        <a href="#" class="profile-register-link">Зарегистрироваться</a>
+                    </div>
+                    <div class="profile-remind-pass">
+                        <a href="#" class="profile-remind-link">Напомнить пароль</a>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
     </header>
@@ -73,5 +95,9 @@
             </div>
         </div>
     </footer>
+    <!-- JQuery connection -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Scripts -->
+    <script src="{% static 'users/js/script.js' %}"></script>
 </body>
 </html>

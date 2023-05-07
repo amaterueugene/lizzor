@@ -10,6 +10,6 @@ class ProfileView(ProfileMixin, DetailView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        
+        # context['profile'] = Profile.objects.get(slug=kwargs['object'].slug)
         c_def = self.get_user_context(profile=context['profile'])
         return dict(list(context.items())+list(c_def.items()))

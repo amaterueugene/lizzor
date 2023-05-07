@@ -68,7 +68,7 @@ header .header-menu-container .header-menu-list {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header .header-menu-container .header-profile > a > img {
+header .header-menu-container .header-profile > button > img {
   max-width: 29px;
   max-height: 29px;
   margin-left: 260px;

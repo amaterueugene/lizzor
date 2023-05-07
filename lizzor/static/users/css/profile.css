@@ -22,9 +22,14 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.profile-container .resume img {
-  height: 150px;
+.profile-container .resume img.rounded {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 50%;
+  height: 150px;
+  width: 150px;
 }
 .profile-container .resume .naming {
   display: -webkit-box;
