@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django_countries.fields import CountryField
+from django.utils.text import slugify
 from homepage.models import Article
 
 
@@ -35,7 +36,10 @@ class Profile(AbstractUser):
     read_later = models.ManyToManyField(Article, blank=True, related_name='read_later', verbose_name='Читать позже')
     history = models.ManyToManyField(Article, blank=True, verbose_name='История')
     
-    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.username)
+        return super().save(*args, **kwargs)
 
 
 
