@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/minimal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/minimal.css' %}">
     {% block add_links %} {% endblock %}
     <title>{{title}}</title>
 </head>
@@ -13,7 +13,7 @@
     <header>
         <div class="header-menu-container">
             <div class="logo">
-                <a href="{% url 'HomePage' %}"><img src="{% static 'homepage/imgs/logo-branding.png' %}" alt="Логотип проекта"></a>
+                <a href="{% url 'HomePage' %}"><img src="{% static 'base/imgs/logo-branding.png' %}" alt="Логотип проекта"></a>
             </div>
             <div class="header-menu-list">
                 {% for item in categories %}
@@ -30,7 +30,7 @@
                 </div>
                 {% else %}
                 <button class="profile-icon-btn">
-                    <img src="{% static 'homepage/imgs/icons/icons8-male-user-50.png' %}" alt="Профиль">
+                    <img src="{% static 'base/imgs/icons/icons8-male-user-50.png' %}" alt="Профиль">
                 </button>
                 <div class="header-dropdown">
                     <form action="" method="post" class="profile-login-form">
@@ -78,17 +78,17 @@
                 <div class="social-links">
                     <div class="instagram">
                         <a href="#" class="footer-social-link">
-                            <img src="{% static 'homepage/imgs/icons/instagram.png' %}" alt="Instagram Account">
+                            <img src="{% static 'base/imgs/icons/instagram.png' %}" alt="Instagram Account">
                         </a>
                     </div>
                     <div class="telegram">
                         <a href="#" class="footer-social-link">
-                            <img src="{% static 'homepage/imgs/icons/telegram.png' %}" alt="Telegram Channel">
+                            <img src="{% static 'base/imgs/icons/telegram.png' %}" alt="Telegram Channel">
                         </a>
                     </div>
                     <div class="tiktok">
                         <a href="#" class="footer-social-link">
-                            <img src="{% static 'homepage/imgs/icons/tiktok.png' %}" alt="TikTok Account">
+                            <img src="{% static 'base/imgs/icons/tiktok.png' %}" alt="TikTok Account">
                         </a>
                     </div>
                 </div>
@@ -98,6 +98,6 @@
     <!-- JQuery connection -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Scripts -->
-    <script src="{% static 'users/js/script.js' %}"></script>
+    <script src="{% static 'base/js/script.js' %}"></script>
 </body>
 </html>
