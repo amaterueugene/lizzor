@@ -9,7 +9,11 @@
     <article>
         <div class="profile-container">
             <div class="resume">
+                {% if profile.avatar %}
                 <img class="profile-avatar rounded" src="{{ profile.avatar.url }}" alt="Аватар пользователя">
+                {% else %}
+                <img class="profile-avatar rounded" src="{% static 'base/imgs/logo.png' %}" alt="Аватар пользователя">
+                {% endif %}
                 <div class="naming">
                     <h1 class="profile-full-name">{{ profile.first_name }} {{ profile.last_name }}</h1>
                     <p class="profile-username">@{{ profile.username }}</p>
