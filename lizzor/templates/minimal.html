@@ -22,9 +22,15 @@
             </div>
             <div class="header-profile">
                 {% if user.is_authenticated %}
+                {% if profile.avatar %}
                 <button class="profile-icon-btn">
-                    <img src="{{ profile.avatar.url}}" alt="Профиль">
+                    <img src="{{ profile.avatar.url }}" alt="Профиль">
                 </button>
+                {% else %}
+                <button class="profile-icon-btn">
+                    <img src="{% static 'base/imgs/logo.png' %}" alt="Профиль">
+                </button>
+                {% endif %}
                 <div class="header-dropdown">
                 
                 </div>
@@ -33,7 +39,7 @@
                     <img src="{% static 'base/imgs/icons/icons8-male-user-50.png' %}" alt="Профиль">
                 </button>
                 <div class="header-dropdown">
-                    <form action="" method="post" class="profile-login-form">
+                    <form method="post" class="profile-login-form">
                         <input type="text">
                         <input type="text">
                         <button>Войти</button>

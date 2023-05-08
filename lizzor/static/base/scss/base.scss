@@ -52,11 +52,46 @@ header {
             display: flex;
             justify-content: space-between;
         }
-        .header-profile>button>img {
-            max-width: 29px;
-            max-height: 29px;
-            margin-left: 260px;
-        }
+        .header-profile {
+            position: relative;
+
+            .header-dropdown {
+                display: none;
+            }
+            .header-dropdown-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 60%;
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 5px;
+                background-color: #FFFFFF;
+                a {
+                    text-transform: none;
+                    font-size: 16px;
+                    color: black;
+                }
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 3px;
+                    input, button {
+                        border: 1px solid black;
+                        border-radius: 5px;
+                    }
+                    button {
+                        padding: 2px 8px;
+                    }
+                }
+            }
+            .profile-icon-btn { margin-left: 260px; }
+            .profile-icon-btn>img {
+                width: 29px; 
+                height: 29px; 
+            }
+        } 
     }
 
     .subheader {

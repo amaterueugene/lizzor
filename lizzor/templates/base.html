@@ -21,9 +21,37 @@
                 {% endfor %}
             </div>
             <div class="header-profile">
-                <button href="#" class="profile-icon-btn">
+                {% if user.is_authenticated %}
+                {% if profile.avatar %}
+                <button class="profile-icon-btn">
+                    <img src="{{ profile.avatar.url }}" alt="Профиль">
+                </button>
+                {% else %}
+                <button class="profile-icon-btn">
+                    <img src="{% static 'base/imgs/logo.png' %}" alt="Профиль">
+                </button>
+                {% endif %}
+                <div class="header-dropdown">
+                
+                </div>
+                {% else %}
+                <button class="profile-icon-btn">
                     <img src="{% static 'base/imgs/icons/icons8-male-user-50-white.png' %}" alt="Профиль">
                 </button>
+                <div class="header-dropdown">
+                    <form method="post" class="profile-login-form">
+                        <input type="text">
+                        <input type="text">
+                        <button>Войти</button>
+                    </form>
+                    <div class="profile-register">
+                        <a href="{% url 'Register' %}" class="profile-register-link">Зарегистрироваться</a>
+                    </div>
+                    <div class="profile-remind-pass">
+                        <a href="#" class="profile-remind-link">Напомнить пароль</a>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
         <div class="subheader">
@@ -83,5 +111,9 @@
         </div>
     </div>
 </footer>
+<!-- JQuery connection -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- Scripts -->
+<script src="{% static 'base/js/script.js' %}"></script>
 </body>
 </html>
