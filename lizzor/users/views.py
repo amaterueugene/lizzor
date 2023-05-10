@@ -1,5 +1,7 @@
+from django.shortcuts import redirect
 from django.views.generic import DetailView, CreateView
 from django.contrib.auth.views import LoginView
+from django.contrib.auth import logout
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import RegisterProfileForm
@@ -40,3 +42,8 @@ class LoginProfile(LoginView):
     
     def get_success_url(self):
         return reverse_lazy('HomePage')
+    
+
+def logout_profile(request):
+    logout(request)
+    return redirect('HomePage')

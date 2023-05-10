@@ -32,18 +32,21 @@
                 </button>
                 {% endif %}
                 <div class="header-dropdown">
-                
+                    <div class="profile-link-box">
+                        <a href="{% url 'ProfilePage' username=profile.username %}">Профиль</a>
+                    </div>
+                    <div class="profile-logout-box">
+                        <a href="{% url 'Logout'%}">Выйти</a>
+                    </div>
                 </div>
                 {% else %}
                 <button class="profile-icon-btn">
                     <img src="{% static 'base/imgs/icons/icons8-male-user-50.png' %}" alt="Профиль">
                 </button>
                 <div class="header-dropdown">
-                    <form method="post" class="profile-login-form">
-                        <input type="text">
-                        <input type="text">
-                        <button>Войти</button>
-                    </form>
+                    <div class="profile-login">
+                        <a href="{% url 'Login' %}" class="profile-login-link">Войти</a>
+                    </div>
                     <div class="profile-register">
                         <a href="{% url 'Register' %}" class="profile-register-link">Зарегистрироваться</a>
                     </div>
