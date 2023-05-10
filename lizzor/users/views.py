@@ -1,5 +1,7 @@
 from django.views.generic import DetailView, CreateView
+from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
+from django.contrib.auth.forms import AuthenticationForm
 from .forms import RegisterProfileForm
 from .models import Profile
 from .utils import ProfileMixin
@@ -25,3 +27,16 @@ class RegisterProfile(CreateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Регистрация'
         return context
+    
+
+class LoginProfile(LoginView):
+    form_class = AuthenticationForm
+    template_name = 'users/login.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Авторизация'
+        return context
+    
+    def get_success_url(self):
+        return reverse_lazy('HomePage')
