@@ -28,4 +28,31 @@
             }
         }
     }
+    .content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        .content-block {
+            width: 50%;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            h1 {
+                font-size: 30px;
+                text-align: center;
+            }
+            .content-list {
+                width: 99%;
+                height: 90%;
+                border-top: 1px solid black;
+            }
+            .content-post {
+                width: 100%;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+        }
+    }
 }
